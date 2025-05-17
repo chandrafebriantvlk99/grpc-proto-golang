@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"chandra-grpc-protobuff-golang/userpb"
+	"grpc-proto-golang/userpb"
 
 	"google.golang.org/grpc"
 )
@@ -28,5 +28,5 @@ func main() {
 		log.Fatalf("Error when calling GetUser: %v", err)
 	}
 
-	log.Printf("Response: Name=%s, Age=%d", res.GetName(), res.GetAge())
+	log.Printf("Response: Name=%s, Age=%d, Date=%d", res.GetName(), res.GetAge(), res.GetDate())
 }
