@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	"chandra-grpc-protobuff-golang/userpb"
+	"grpc-proto-golang/userpb"
 
 	"google.golang.org/grpc"
 )
@@ -18,8 +18,9 @@ type server struct {
 func (s *server) GetUser(ctx context.Context, req *userpb.UserRequest) (*userpb.UserResponse, error) {
 	log.Printf("Received request for user_id: %s\n", req.GetUserId())
 	return &userpb.UserResponse{
-		Name: "Chandra",
-		Age:  38,
+		Name: "Chandra Febrian",
+		Age:  20,
+		Date: 20231010,
 	}, nil
 }
 

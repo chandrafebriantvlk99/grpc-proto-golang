@@ -1,4 +1,4 @@
-module chandra-grpc-protobuff-golang
+module grpc-proto-golang
 
 go 1.24.3
 
